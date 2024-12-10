@@ -1,0 +1,65 @@
+/* fontsss */
+@font-face {
+  font-family: "CustomFont"; /* Choose a name for the font */
+  src: url("./fonts/Cinzel-Bold.otf") format("opentype"); /* Path to the font file */
+  font-weight: normal; /* You can specify if you want bold, regular, etc. */
+  font-style: normal; /* Or italic, if applicable */
+}
+
+/* 
+================================ corousalintro ====================== */
+
+.logo {
+  font-family: "CustomFont";
+  font-size: 100%;
+}
+.corousalintro1 {
+  height: 100vh;
+  background-image: url("../images/Backgrounds/corosalBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.corousalintro2 {
+  height: 100vh;
+  background-image: url("../images/Backgrounds/Carousel-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.corousalintro3 {
+  height: 100vh;
+  background-image: url("../images/Backgrounds/Snapinsta.app_245120941_257594066289234_1567487318804141529_n_1080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.corousildiv {
+  backdrop-filter: blur(5px);
+}
+
+.back {
+  width: 100%;
+  height: 55vh;
+  background-image: url("../images/Backgrounds/parallax1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.midle-text-container {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.486);
+}
+
+.catogory-list {
+  background-color: rgba(0, 221, 255, 0.268);
+}
+
+/* .gallarydiv {
+  background-image: url("../images/Backgrounds/Carousel-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+} */
