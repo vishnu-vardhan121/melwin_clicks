@@ -1,9 +1,8 @@
-/* fontsss */
 @font-face {
-  font-family: "CustomFont"; /* Choose a name for the font */
-  src: url("./fonts/Cinzel-Bold.otf") format("opentype"); /* Path to the font file */
-  font-weight: normal; /* You can specify if you want bold, regular, etc. */
-  font-style: normal; /* Or italic, if applicable */
+  font-family: "CustomFont";
+  src: url("./fonts/Cinzel-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* 
@@ -35,7 +34,7 @@
   background-position: center center;
 }
 .corousildiv {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
 }
 
 .back {
