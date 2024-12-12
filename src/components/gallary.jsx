@@ -55,7 +55,7 @@ function Gallary({ category }) {
             <a key={index} href={value.src} className="block">
               <img
                 src={value.src}
-                alt={value.caption}
+                alt={value.caption +"Landscape photography by Melwi Clicks"}
                 className="w-full h-auto object-cover rounded-sm shadow-lg transition-transform duration-200 hover:scale-105"
               />
             </a>
