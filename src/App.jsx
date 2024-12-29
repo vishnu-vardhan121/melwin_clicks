@@ -1,7 +1,7 @@
 
 import './App.css';
 import './css/stlylse.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -15,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<h1>About</h1>} />
+          
         </Routes>
         <Footer />
       </BrowserRouter>
