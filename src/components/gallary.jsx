@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 
@@ -6,11 +6,11 @@ function Gallary({ category }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    // Define static glob imports for each category
     const categoryImages = {
-      kids: import.meta.glob("../images/kids/kids1/*.jpg"),
-      nature: import.meta.glob("../images/nature/*.jpg"),
-      wedding: import.meta.glob("../images/wedding/*.jpg"),
+      kids: import.meta.glob("../images/kids/*.{jpg,png,gif,webp}"),
+      nature: import.meta.glob("../images/nature/*.{jpg,png,gif,webp}"),
+      wedding: import.meta.glob("../images/wedding/*.{jpg,png,gif,webp}"),
+      city: import.meta.glob("../images/city/*.{jpg,png,gif,webp}"),
     };
 
     const loadImages = async () => {
@@ -48,15 +48,15 @@ function Gallary({ category }) {
     <div className="p-4 gallarydiv">
       {images.length > 0 ? (
         <LightGallery
-          elementClassNames="custom-wrapper-class grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1"
+          elementClassNames="masonry columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-1"
           onBeforeSlide={onBeforeSlide}
         >
           {images.map((value, index) => (
-            <a key={index} href={value.src} className="block">
+            <a key={index} href={value.src} className="mb-4 block">
               <img
                 src={value.src}
-                alt={value.caption +"Landscape photography by Melwi Clicks"}
-                className="w-full h-auto object-cover rounded-sm shadow-lg transition-transform duration-200 hover:scale-105"
+                alt={value.caption + " Landscape photography by Melwi Clicks"}
+                className="w-full h-auto object-cover rounded-sm shadow-lg hover:scale-105 transition-transform"
               />
             </a>
           ))}

@@ -1,22 +1,23 @@
 
-import "./App.css";
-import "./css/stlylse.css";
-import Navbar from "./components/navbar";
-import { useEffect } from "react";
-import Home from "./pages/Home";
+import './App.css';
+import './css/stlylse.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 function App() {
-  useEffect(() => {
-    // Scrolls the window 70px from the top with smooth animation
-    window.scroll({
-      top: 70,
-      behavior: "smooth",
-    });
-  }, []);
   return (
     <>
-      <Navbar  />
-      <Home />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

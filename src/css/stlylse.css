@@ -10,11 +10,10 @@
 
 .logo {
   font-family: "CustomFont";
-  font-size: 100%;
 }
 .corousalintro1 {
   height: 100vh;
-  background-image: url("../images/Backgrounds/corosalBg.jpg");
+  background-image: url("../images/Backgrounds/melwin2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -28,7 +27,7 @@
 }
 .corousalintro3 {
   height: 100vh;
-  background-image: url("../images/Backgrounds/Snapinsta.app_245120941_257594066289234_1567487318804141529_n_1080.jpg");
+  background-image: url("../images/Backgrounds/Carousel-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -62,3 +61,7 @@
   background-attachment: fixed;
   background-position: center center;
 } */
+
+.myprojects {
+  font-family: "CustomFont";
+}
