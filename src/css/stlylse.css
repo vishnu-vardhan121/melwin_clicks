@@ -65,3 +65,8 @@
 .myprojects {
   font-family: "CustomFont";
 }
+.whats {
+  display: fixed;
+  bottom: 0%;
+  right: 0%;
+}

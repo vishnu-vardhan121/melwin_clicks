@@ -5,7 +5,9 @@ import Navbar from './components/navbar';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+import AboutMe from './pages/abote';
+import ProjectsPage from './pages/Projects';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 
 function App() {
   return (
@@ -14,10 +16,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<h1>About me</h1>} />
-          
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:category/:subcategory" element={<ProjectDetailPage />} />
+          <Route path="/about" element={<AboutMe />} />        
         </Routes>
+        
         <Footer />
       </BrowserRouter>
     </>

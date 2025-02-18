@@ -120,13 +120,7 @@ function Navbar() {
           className="cursor-pointer text-gray-700 hover:text-indigo-500 transition-all duration-300"
           onClick={() => handleSectionClick("/about")}
         >
-          About
-        </li>
-        <li
-          className="cursor-pointer text-gray-700 hover:text-indigo-500 transition-all duration-300"
-          onClick={() => handleSectionClick("/contact")}
-        >
-          Contact
+          AboutMe
         </li>
       </ul>
     </motion.nav>

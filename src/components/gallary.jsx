@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
+import { motion } from "framer-motion";
 
 function Gallary({ category }) {
   const [images, setImages] = useState([]);
@@ -45,24 +46,34 @@ function Gallary({ category }) {
   };
 
   return (
-    <div className="p-4 gallarydiv">
+    <div className="p-4 gallarydiv min-h-screen">
       {images.length > 0 ? (
         <LightGallery
-          elementClassNames="masonry columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-1"
+          elementClassNames="masonry columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-2"
           onBeforeSlide={onBeforeSlide}
         >
           {images.map((value, index) => (
-            <a key={index} href={value.src} className="mb-4 block">
-              <img
+            <motion.a
+              key={index}
+              href={value.src}
+              className="mb-4 block overflow-hidden rounded-lg shadow-lg relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.img
                 src={value.src}
                 alt={value.caption + " Landscape photography by Melwi Clicks"}
-                className="w-full h-auto object-cover rounded-sm shadow-lg hover:scale-105 transition-transform"
+                className="w-full h-auto object-cover rounded-lg transition-transform"
+                whileHover={{ scale: 1.1 }}
               />
-            </a>
+              <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all"></div>
+            </motion.a>
           ))}
         </LightGallery>
       ) : (
-        <p className="text-center text-gray-500">Loading images...</p>
+        <p className="text-center text-white animate-pulse">Loading images...</p>
       )}
     </div>
   );
