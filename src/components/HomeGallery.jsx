@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Gallary from "./Gallary.jsx";
+import Gallary from "./Gallary";
 
 function HomeGallery() {
   const [currentSection, setCurrentSection] = useState("kids");
