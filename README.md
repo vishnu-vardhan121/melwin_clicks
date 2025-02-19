@@ -25,5 +25,5 @@ Melwi is a passionate photographer with a keen eye for capturing the beauty in e
 Contact
 For collaborations or bookings, contact us at:
 
-Email: example@email.com
+Email: 
 Instagram: https://www.instagram.com/melwin_clicks/
