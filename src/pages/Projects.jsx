@@ -58,60 +58,38 @@ function ProjectsPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Wedding Projects */}
-        <motion.div
-          className="border p-6 rounded-xl shadow-lg bg-gray-800 hover:shadow-2xl transition"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl font-semibold mb-6 text-blue-400">Wedding</h2>
-          <ul className="space-y-6">
-            {previewImages.wedding.map((preview, index) => (
-              <motion.li
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link to={`/projects/wedding/${preview.subcategory}`} className="block">
-                  <img
-                    src={preview.imageUrl}
-                    alt={`Preview of ${preview.subcategory}`}
-                    className="w-full h-40 object-cover rounded-lg mb-2 shadow-md"
-                  />
-                  <p className="text-center font-medium text-gray-300">{preview.subcategory}</p>
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+        {
+          Object.keys(previewImages).map((key) => {
+            return(<><motion.div
+              className="border p-6 rounded-xl shadow-lg bg-gray-800 hover:shadow-2xl transition"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-semibold mb-6 text-blue-400">{key}</h2>
+              <ul className="space-y-6">
+                {previewImages[key].map((preview, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link to={`/projects/wedding/${preview.subcategory}`} className="block">
+                      <img
+                        src={preview.imageUrl}
+                        alt={`Preview of ${preview.subcategory}`}
+                        className="w-full h-40 object-cover rounded-lg mb-2 shadow-md"
+                      />
+                      <p className="text-center font-medium text-gray-300">{preview.subcategory}</p>
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div></>)
+          })
+        }
 
-        {/* Kids Projects */}
-        <motion.div
-          className="border p-6 rounded-xl shadow-lg bg-gray-800 hover:shadow-2xl transition"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h2 className="text-2xl font-semibold mb-6 text-blue-400">Kids</h2>
-          <ul className="space-y-6">
-            {previewImages.kids.map((preview, index) => (
-              <motion.li
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link to={`/projects/kids/${preview.subcategory}`} className="block">
-                  <img
-                    src={preview.imageUrl}
-                    alt={`Preview of ${preview.subcategory}`}
-                    className="w-full h-40 object-cover rounded-lg mb-2 shadow-md"
-                  />
-                  <p className="text-center font-medium text-gray-300">{preview.subcategory}</p>
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+
       </div>
     </div>
   );
