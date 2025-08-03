@@ -28,10 +28,10 @@ const Footer = () => {
 
     emailjs
       .send(
-        "service_4pxlqof",
-        "template_m79em8y",
+        "service_3ngivkq",
+        "template_0yd5sm4",
         templateParams,
-        "_tvFaE0qHkv3zrQBJ"
+        "XZHrW-19BIY2UHKfQ"
       )
       .then(
         () => {
